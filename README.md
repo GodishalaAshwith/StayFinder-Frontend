@@ -1,73 +1,164 @@
-# Welcome to your Lovable project
+# StayFinder - Modern Accommodation Booking Platform
 
-## Project info
+StayFinder is a full-stack web application that revolutionizes the way people find and book accommodations. Built with modern technologies and designed for scale, it offers unique features that set it apart from traditional booking platforms.
 
-**URL**: https://lovable.dev/projects/12f67c5b-8180-4eae-a773-0eee66eaca7d
+## Tech Stack & Architecture
 
-## How can I edit this code?
+### Frontend (Current Repository)
 
-There are several ways of editing your application.
+- **React + TypeScript**: For type-safe, component-based UI development
+- **Vite**: For lightning-fast development and optimized builds
+- **Tailwind CSS**: For utility-first styling and rapid UI development
+- **shadcn/ui**: For beautiful, accessible, and customizable UI components
+- **React Query**: For efficient server state management
+- **Zustand**: For simple and scalable client state management
 
-**Use Lovable**
+### Backend (Separate Repository)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/12f67c5b-8180-4eae-a773-0eee66eaca7d) and start prompting.
+- **Node.js + Express**: For a robust and scalable API
+- **PostgreSQL**: For reliable data persistence
+- **Redis**: For caching and real-time features
+- **TypeORM**: For type-safe database operations
+- **AWS S3**: For media storage
+- **Socket.IO**: For real-time messaging and notifications
 
-Changes made via Lovable will be committed automatically to this repo.
+## Unique Features
 
-**Use your preferred IDE**
+1. **Dynamic Pricing with AI**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+   - Machine learning algorithms analyze market trends, events, and demand
+   - Real-time price adjustments based on multiple factors
+   - Predictive pricing suggestions for hosts
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+2. **Local Experience Integration**
+   - Connect travelers with local guides and experiences
+   - Virtual reality property tours
+   - Integration with local events and activities
+   - Personalized itinerary planning
 
-Follow these steps:
+## Security & Scaling
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Security Measures
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- JWT-based authentication with refresh tokens
+- Rate limiting and request validation
+- Input sanitization and XSS prevention
+- HTTPS-only communication
+- Regular security audits
+- Data encryption at rest and in transit
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Scaling Strategy
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+- Containerized microservices architecture
+- Horizontal scaling with Kubernetes
+- CDN integration for static assets
+- Database sharding for large datasets
+- Caching layers with Redis
+- Load balancing across multiple regions
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+ and npm (or Bun for faster development)
+- Git for version control
+- VS Code (recommended editor)
+
+### Development Setup
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/yourusername/stayfinder-frontend.git
+cd stayfinder-frontend
 ```
 
-**Edit a file directly in GitHub**
+2. Install dependencies
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm install
+# or with Bun
+bun install
+```
 
-**Use GitHub Codespaces**
+3. Set up environment variables
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+cp .env.example .env
+# Edit .env with your configuration
+```
 
-## What technologies are used for this project?
+4. Start the development server
 
-This project is built with:
+```bash
+npm run dev
+# or with Bun
+bun dev
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The application will be available at `http://localhost:8080`
 
-## How can I deploy this project?
+### Build for Production
 
-Simply open [Lovable](https://lovable.dev/projects/12f67c5b-8180-4eae-a773-0eee66eaca7d) and click on Share -> Publish.
+```bash
+npm run build
+npm run preview
+```
 
-## Can I connect a custom domain to my Lovable project?
+### Available Scripts
 
-Yes, you can!
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Lint code
+- `npm run test` - Run tests
+- `npm run type-check` - Check TypeScript types
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Deployment
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### Quick Deploy
+
+The easiest way to deploy is using Vercel:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/stayfinder-frontend)
+
+### Manual Deployment
+
+1. Build the project
+
+```bash
+npm run build
+```
+
+2. Deploy the `dist` folder to any static hosting service:
+
+- Vercel
+- Netlify
+- AWS S3 + CloudFront
+- GitHub Pages
+
+### Environment Variables
+
+Required environment variables:
+
+```env
+VITE_API_URL=https://api.stayfinder.com
+VITE_STRIPE_PUBLIC_KEY=pk_test_...
+VITE_MAPBOX_TOKEN=pk.eyJ1...
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Support
+
+For support, email support@stayfinder.com or join our Discord community.
