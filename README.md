@@ -1,60 +1,49 @@
-# StayFinder - Modern Accommodation Booking Platform
+# StayFinder
 
-StayFinder is a full-stack web application that revolutionizes the way people find and book accommodations. Built with modern technologies and designed for scale, it offers unique features that set it apart from traditional booking platforms.
+StayFinder is a modern web application for finding and booking accommodations. This repository contains the frontend codebase built with React and TypeScript.
 
-## Tech Stack & Architecture
+## Tech Stack
 
-### Frontend (Current Repository)
+### Frontend (This Repository)
 
-- **React + TypeScript**: For type-safe, component-based UI development
-- **Vite**: For lightning-fast development and optimized builds
-- **Tailwind CSS**: For utility-first styling and rapid UI development
-- **shadcn/ui**: For beautiful, accessible, and customizable UI components
-- **React Query**: For efficient server state management
-- **Zustand**: For simple and scalable client state management
+- **React 18**: For building the user interface
+- **TypeScript**: For type-safe development
+- **Vite**: For fast development and optimized builds
+- **Tailwind CSS**: For styling and responsive design
+- **shadcn/ui**: For pre-built accessible UI components
 
-### Backend (Separate Repository)
+## Features (In Development)
 
-- **Node.js + Express**: For a robust and scalable API
-- **PostgreSQL**: For reliable data persistence
-- **Redis**: For caching and real-time features
-- **TypeORM**: For type-safe database operations
-- **AWS S3**: For media storage
-- **Socket.IO**: For real-time messaging and notifications
+### Current Features
 
-## Unique Features
+- Modern, responsive UI
+- Property listing and details pages
+- User authentication interfaces
+- Host dashboard interface
 
-1. **Dynamic Pricing with AI**
+### Planned Features
 
-   - Machine learning algorithms analyze market trends, events, and demand
-   - Real-time price adjustments based on multiple factors
-   - Predictive pricing suggestions for hosts
+- Property search and filtering
+- Booking system
+- User reviews and ratings
+- Host property management
+- Messaging system between hosts and guests
 
-2. **Local Experience Integration**
-   - Connect travelers with local guides and experiences
-   - Virtual reality property tours
-   - Integration with local events and activities
-   - Personalized itinerary planning
+## Project Structure
 
-## Security & Scaling
+```
+src/
+  ├── components/    # Reusable UI components
+  ├── pages/        # Page components
+  ├── lib/          # Utility functions
+  └── hooks/        # Custom React hooks
+```
 
-### Security Measures
+## Development Requirements
 
-- JWT-based authentication with refresh tokens
-- Rate limiting and request validation
-- Input sanitization and XSS prevention
-- HTTPS-only communication
-- Regular security audits
-- Data encryption at rest and in transit
-
-### Scaling Strategy
-
-- Containerized microservices architecture
-- Horizontal scaling with Kubernetes
-- CDN integration for static assets
-- Database sharding for large datasets
-- Caching layers with Redis
-- Load balancing across multiple regions
+- Node.js 18 or higher
+- npm or Bun package manager
+- Git
 
 ## Getting Started
 
@@ -137,28 +126,24 @@ npm run build
 - AWS S3 + CloudFront
 - GitHub Pages
 
-### Environment Variables
+### Environment Setup
 
-Required environment variables:
+Create a `.env` file in the root directory:
 
 ```env
-VITE_API_URL=https://api.stayfinder.com
-VITE_STRIPE_PUBLIC_KEY=pk_test_...
-VITE_MAPBOX_TOKEN=pk.eyJ1...
+VITE_API_URL=http://localhost:3000
 ```
+
+Note: Additional environment variables will be added as features are implemented.
 
 ## Contributing
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
+2. Create a feature branch (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -m 'Add new feature'`)
+4. Push to the branch (`git push origin feature/new-feature`)
 5. Open a Pull Request
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Support
-
-For support, email support@stayfinder.com or join our Discord community.
+This project is licensed under the MIT License
